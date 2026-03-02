@@ -1,0 +1,196 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 2,3}
+
+\section*{More Examples of Lie Algebras}
+
+The matrix algebra, considered as a Lie algebra with respect to the commutator,
+is denoted $\mathfrak{gl}_n(\mathbb{C})$ (or simply $\mathfrak{gl}_n$).
+
+The following subspaces of $\mathfrak{gl}_n$ are Lie subalgebras (i.e., closed under the commutator):
+
+\begin{enumerate}
+\item The subspace of scalar matrices $\mathbb{C}E$ (this is moreover an ideal in $\mathfrak{gl}_n$),
+\item The subspace of traceless matrices $\mathfrak{sl}_n$ (also an ideal),
+\item The subspace of strictly upper triangular matrices $\mathfrak{n}_+(n)$,
+\item The subspace of upper triangular matrices $\mathfrak{b}_+(n)$,
+\item The subspace of skew-symmetric matrices $\mathfrak{so}_n$.
+\end{enumerate}
+
+\textbf{Proposition 1.}
+$\mathfrak{n}_+(3)$ is the Heisenberg algebra, and
+$\mathfrak{b}_+(2)$ is the direct sum of a one-dimensional and a two-dimensional non-abelian Lie algebra.
+
+\section*{Representations: Glossary}
+
+\textbf{Definition 1.}
+A \emph{representation} of a Lie algebra $L$ in a vector space $V$ is a homomorphism
+\[
+\rho : L \to \mathfrak{gl}(V).
+\]
+
+\textbf{Definition 2.}
+A representation $(V,\rho)$ is called \emph{faithful} if $\rho$ is injective.
+
+\textbf{Definition 3.}
+A \emph{subrepresentation} of $(V,\rho)$ is a subspace $V' \subset V$ invariant under all operators $\rho(x)$.
+A representation is \emph{irreducible} if its only subrepresentations are $0$ and $V$.
+
+\textbf{Definition 4.}
+If $(V_1,\rho_1)$ and $(V_2,\rho_2)$ are representations,
+their direct sum is defined by
+\[
+\rho(x)(v_1 \oplus v_2) = \rho_1(x)v_1 \oplus \rho_2(x)v_2.
+\]
+A representation is \emph{indecomposable} if it cannot be written as a direct sum of proper subrepresentations.
+
+\textbf{Definition 5.}
+A representation is \emph{completely reducible} if every subrepresentation has an invariant complement.
+
+\textbf{Proposition 2.}
+A finite-dimensional completely reducible representation decomposes as a direct sum of irreducibles.
+
+\section*{Examples of Representations}
+
+\begin{enumerate}
+\item The trivial representation: $\rho(x)=0$.
+
+\item The adjoint representation: $\rho(x)=\mathrm{ad}\,x$.
+
+Subrepresentations in the adjoint representation are precisely ideals.
+$L$ is simple iff the adjoint representation is irreducible.
+It is faithful iff the center is trivial.
+
+\item The tautological representation of $\mathfrak{gl}_n$ on $V=\mathbb{C}^n$.
+It is always faithful.
+\end{enumerate}
+
+\textbf{Proposition 5.}
+The tautological representation of $\mathfrak{gl}_n$ is irreducible.
+
+\textbf{Proposition 6.}
+The tautological representation of $\mathfrak{n}_+(2)$ is reducible but indecomposable.
+
+\section*{Invariant Forms}
+
+\textbf{Definition 6.}
+A bilinear form $\Phi$ on $(V,\rho)$ is \emph{invariant} if
+\[
+\Phi(\rho(x)v_1,v_2)+\Phi(v_1,\rho(x)v_2)=0.
+\]
+
+Examples:
+
+\begin{enumerate}
+\item Standard inner product on $\mathfrak{so}_n$.
+\item On $\mathfrak{gl}_n$, $\Phi(A,B)=\mathrm{tr}(AB)$.
+\item Killing form:
+\[
+K(x,y)=\mathrm{tr}(\mathrm{ad}\,x\,\mathrm{ad}\,y).
+\]
+\end{enumerate}
+
+Orthogonal complements of subrepresentations are subrepresentations.
+
+If the invariant form is positive definite (real case), the representation is completely reducible.
+
+\section*{Homomorphisms of Representations}
+
+\textbf{Definition 7.}
+$\varphi : V_1 \to V_2$ is an intertwining operator if
+\[
+\varphi \rho_1(x) = \rho_2(x) \varphi.
+\]
+
+\textbf{Proposition 8 (Schur's Lemma).}
+If $\varphi$ is a homomorphism between irreducible representations,
+then either $\varphi=0$ or $\varphi$ is an isomorphism.
+
+Over $\mathbb{C}$, any endomorphism of an irreducible representation is scalar multiplication.
+
+\section*{Tensor Products and Duals}
+
+\textbf{Definition 8.}
+The tensor product representation is defined by
+\[
+\rho(x)(v_1 \otimes v_2)
+=
+\rho_1(x)v_1 \otimes v_2
++
+v_1 \otimes \rho_2(x)v_2.
+\]
+
+\textbf{Proposition 11.}
+$S^n V$ and $\Lambda^n V$ are subrepresentations of $V^{\otimes n}$.
+
+\textbf{Definition 9.}
+The dual representation is defined by
+\[
+\rho^*(x)f(v) = -f(\rho(x)v).
+\]
+
+\section*{Canonical Isomorphisms}
+
+\textbf{Proposition 13.}
+For $V=\mathbb{C}^n$,
+\[
+\text{Adjoint representation of } \mathfrak{gl}_n
+\cong V \otimes V^*.
+\]
+
+\textbf{Definition 10.}
+The invariant subspace:
+\[
+V^L = \{ v \in V \mid \rho(x)v=0 \ \forall x\in L \}.
+\]
+
+\[
+\mathrm{Hom}_L(V,W) = (V^* \otimes W)^L
+\]
+
+Invariant bilinear forms correspond to $(V^* \otimes V^*)^L$.
+
+\section*{Irreducible Representations of $\mathfrak{sl}_2$}
+
+\textbf{Proposition 16.}
+The symmetric powers $S^n V$ of the tautological representation of $\mathfrak{sl}_2$
+are irreducible.
+
+Let $V=\mathbb{C}^2$ with basis $\{u,v\}$ and
+
+\[
+e =
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix},
+\quad
+f =
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix},
+\quad
+h =
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}.
+\]
+
+Then on $S^n V$ (homogeneous polynomials of degree $n$):
+
+\[
+\rho(e) = u \frac{\partial}{\partial v},
+\quad
+\rho(f) = v \frac{\partial}{\partial u},
+\quad
+\rho(h) = u \frac{\partial}{\partial u}
+-
+v \frac{\partial}{\partial v}.
+\]
+
+Irreducibility follows from:
+
+\begin{enumerate}
+\item Every nontrivial invariant subspace contains $u^n$.
+\item $u^n$ generates $S^n V$.
+\end{enumerate}

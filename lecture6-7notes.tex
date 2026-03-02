@@ -1,0 +1,201 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 6,7}
+
+\section*{The Lie Algebra $\mathfrak{sl}_2$}
+
+Let $e,f,h$ be the standard generators of $\mathfrak{sl}_2(\mathbb{C})$ such that
+\[
+[e,f] = h, \quad [h,e] = 2e, \quad [h,f] = -2f.
+\]
+
+\textbf{Proposition 1.}
+\[
+\mathfrak{sl}_2(\mathbb{C}) \cong \mathfrak{so}_3(\mathbb{C}).
+\]
+
+\textbf{Proof.}
+On $\mathfrak{sl}_2(\mathbb{C}) \cong \mathbb{C}^3$ there exists a nondegenerate invariant symmetric bilinear form (the Killing form). Thus the image of $\mathfrak{sl}_2(\mathbb{C})$ under the adjoint representation lies in $\mathfrak{so}_3(\mathbb{C})$. Since the adjoint representation is faithful and $\mathfrak{so}_3(\mathbb{C})$ is 3-dimensional, $\mathrm{ad}$ is an isomorphism.
+\qed
+
+A natural basis of $\mathfrak{so}_3(\mathbb{C})$ is
+
+\[
+i =
+\begin{pmatrix}
+0&1&0\\
+-1&0&0\\
+0&0&0
+\end{pmatrix}, \quad
+j =
+\begin{pmatrix}
+0&0&0\\
+0&0&1\\
+0&-1&0
+\end{pmatrix}, \quad
+k =
+\begin{pmatrix}
+0&0&1\\
+0&0&0\\
+-1&0&0
+\end{pmatrix}.
+\]
+
+with commutation relations
+\[
+[i,j]=k, \quad [j,k]=i, \quad [k,i]=j.
+\]
+
+Under the isomorphism $\mathfrak{sl}_2(\mathbb{C}) \cong \mathfrak{so}_3(\mathbb{C})$
+these correspond to the Pauli matrices:
+
+\[
+i=
+\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}, \quad
+j=
+\begin{pmatrix}
+i&0\\
+0&-i
+\end{pmatrix}, \quad
+k=
+\begin{pmatrix}
+0&i\\
+i&0
+\end{pmatrix}.
+\]
+
+\textbf{Proposition 2.}
+\[
+\mathfrak{sl}_2(\mathbb{R}) \not\cong \mathfrak{so}_3(\mathbb{R}).
+\]
+
+\textbf{Proof.}
+Their Killing forms have different signatures:
+$\mathfrak{sl}_2(\mathbb{R})$ has signature $(++-)$,
+while $\mathfrak{so}_3(\mathbb{R})$ is negative definite.
+\qed
+
+\section*{Finite-Dimensional Irreducible Representations of $\mathfrak{sl}_2$}
+
+Recall that
+\[
+S^n(\mathbb{C}^2)
+\]
+is irreducible.
+
+\textbf{Theorem 1.}
+Every finite-dimensional irreducible representation of
+$\mathfrak{sl}_2(\mathbb{C})$ is isomorphic to $S^n(\mathbb{C}^2)$
+for some $n\in\mathbb{Z}_{\ge0}$.
+
+\subsection*{Key Lemmas}
+
+If $v$ is an eigenvector of $\rho(h)$ with eigenvalue $\mu$, then
+\[
+\rho(e)v \text{ has eigenvalue } \mu+2,
+\quad
+\rho(f)v \text{ has eigenvalue } \mu-2.
+\]
+
+There exists a highest-weight vector $v_\lambda$ such that
+\[
+\rho(e)v_\lambda=0.
+\]
+
+The space
+\[
+V_\lambda = \mathrm{span}\{ \rho(f)^k v_\lambda \}
+\]
+is a subrepresentation.
+
+Finite dimensionality forces
+\[
+\lambda = n\in \mathbb{Z}_{\ge0}.
+\]
+
+Thus irreducible representations are exactly $V_n$,
+and $\dim V_n=n+1$.
+
+\section*{Category $\mathcal{O}$}
+
+Finite-dimensional irreducible representations satisfy:
+
+1. $\rho(h)$ is semisimple.  
+2. $\rho(e)$ acts locally nilpotently.
+
+The category of finitely generated $\mathfrak{sl}_2$-modules satisfying these properties
+is called category $\mathcal{O}$.
+
+\textbf{Verma module $M_\lambda$:}
+
+Basis $v_\lambda^{(k)}, k=0,1,2,\dots$ with
+
+\[
+\rho(e)v_\lambda^{(k)} = (k\lambda-k(k-1))v_\lambda^{(k-1)},
+\]
+\[
+\rho(f)v_\lambda^{(k)} = v_\lambda^{(k+1)},
+\]
+\[
+\rho(h)v_\lambda^{(k)} = (\lambda-2k)v_\lambda^{(k)}.
+\]
+
+It is reducible iff $\lambda\in\mathbb{Z}_{\ge0}$.
+
+\section*{Casimir Operator and Complete Reducibility}
+
+Define
+\[
+C = ef + fe + \frac12 h^2.
+\]
+
+\textbf{Lemma.}
+$C$ lies in the center of $U(\mathfrak{sl}_2)$.
+
+By Schur’s lemma, $C$ acts by scalars on irreducibles.
+
+\[
+\rho(C)|_{V_n} = \frac{n(n+2)}{2}\,\mathrm{id}.
+\]
+
+\textbf{Theorem 2.}
+Every finite-dimensional representation of
+$\mathfrak{sl}_2(\mathbb{C})$ is completely reducible.
+
+\section*{Characters}
+
+Let $V(m)$ be the weight space of weight $m$.
+
+\[
+\chi_V(q)=\sum_{m\in\mathbb{Z}} q^m \dim V(m).
+\]
+
+Properties:
+\[
+\chi_{V\oplus W}=\chi_V+\chi_W,
+\quad
+\chi_{V\otimes W}=\chi_V\chi_W.
+\]
+
+\[
+\chi_{V_n}(q)
+=
+q^n+q^{n-2}+\cdots+q^{-n}
+=
+\frac{q^{n+1}-q^{-n-1}}{q-q^{-1}}.
+\]
+
+Example:
+\[
+\chi_{V_2\otimes V_2}
+=
+(q^2+1+q^{-2})^2
+=
+\chi_{V_4}+\chi_{V_2}+\chi_{V_0}.
+\]
+
+Thus
+\[
+V_2\otimes V_2 \cong V_4\oplus V_2\oplus V_0.
+\]

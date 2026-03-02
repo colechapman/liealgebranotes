@@ -1,0 +1,202 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 1}
+
+\textbf{Definition 1.}
+A \emph{Lie algebra} is a vector space equipped with a bilinear operation 
+$[\cdot,\cdot]$ (usually called the commutator) satisfying the following axioms:
+
+\begin{enumerate}
+\item (Skew-symmetry or anticommutativity) $[x,x] = 0$.
+If the characteristic of the base field is not equal to $2$, this is equivalent to
+\[
+[x,y] = -[y,x].
+\]
+
+\item (Jacobi identity)
+\[
+[x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0.
+\]
+\end{enumerate}
+
+\textbf{Examples.}
+
+\begin{enumerate}
+\item Let $A$ be an associative algebra. Define a Lie algebra $A^{-}$ as the vector space $A$
+with operation
+\[
+[a,b] := ab - ba.
+\]
+
+\item The space $\mathbb{R}^3$ with the vector cross product is a Lie algebra over $\mathbb{R}$.
+
+\item Any vector space with the identically zero commutator.
+Such a Lie algebra is called \emph{abelian}.
+\end{enumerate}
+
+The following example is more general.
+
+\textbf{Definition 2.}
+A \emph{derivation} of an algebra $A$ is a linear operator
+\[
+D: A \to A
+\]
+satisfying the Leibniz identity:
+\[
+D(a\cdot b) = D(a)\cdot b + a\cdot D(b).
+\]
+
+Clearly, all derivations of $A$ form a vector space.
+
+\textbf{Proposition 1.}
+If $D_1, D_2$ are derivations of $A$, then
+\[
+D_1D_2 - D_2D_1
+\]
+is also a derivation of $A$.
+
+Thus all derivations of $A$ form a Lie algebra, denoted $\mathrm{Der}(A)$.
+
+\textbf{Example.}
+Describe $\mathrm{Der}(\mathbb{C}[z])$, the Lie algebra of derivations of the polynomial algebra.
+Let $D \in \mathrm{Der}(\mathbb{C}[z])$. Then
+\[
+D(1) = D(1\cdot 1) = 1\cdot D(1) + D(1)\cdot 1 = 2D(1),
+\]
+hence $D(1) = 0$.
+
+By induction using the Leibniz rule,
+\[
+D(z^n) = n z^{n-1} D(z).
+\]
+Thus
+\[
+D = D(z)\frac{\partial}{\partial z}.
+\]
+
+Therefore $\mathrm{Der}(\mathbb{C}[z])$ is the space of polynomial vector fields
+on the complex line with the commutator of vector fields.
+This Lie algebra is usually denoted $W_1$.
+
+\section*{Glossary}
+
+\textbf{Definition 3.}
+A vector subspace $I$ of a Lie algebra $L$ is called an \emph{ideal} if
+for all $x \in I$ and $y \in L$,
+\[
+[x,y] \in I.
+\]
+
+\textbf{Proposition 2.}
+The commutator operation is well-defined on the quotient space $L/I$.
+The resulting Lie algebra is called the \emph{quotient algebra}.
+
+\textbf{Definition 4.}
+The \emph{commutator subalgebra} of $L$ is the subspace
+\[
+[L,L] \subset L
+\]
+spanned by elements $[x,y]$ for all $x,y \in L$.
+
+\textbf{Proposition 3.}
+$[L,L]$ is an ideal of $L$. The quotient $L/[L,L]$ is abelian.
+
+\textbf{Definition 5.}
+The \emph{center} of $L$ is
+\[
+Z(L) = \{x \in L \mid [x,y] = 0 \text{ for all } y \in L \}.
+\]
+Clearly $Z(L)$ is an ideal.
+
+\textbf{Definition 6.}
+Let $L_1, L_2$ be Lie algebras. A linear map
+\[
+\varphi: L_1 \to L_2
+\]
+is a \emph{homomorphism} if
+\[
+\varphi([x,y]) = [\varphi(x),\varphi(y)].
+\]
+
+The \emph{kernel} is
+\[
+\ker\varphi = \{x \in L_1 \mid \varphi(x)=0\},
+\]
+and the \emph{image} is
+\[
+\mathrm{Im}\,\varphi = \{\varphi(x) \mid x \in L_1\}.
+\]
+
+A bijective homomorphism is called an \emph{isomorphism}.
+
+\textbf{Proposition 4 (Homomorphism Theorem).}
+If $\varphi: L_1 \to L_2$ is a homomorphism, then
+$\ker\varphi$ is an ideal of $L_1$,
+$\mathrm{Im}\,\varphi$ is a subalgebra of $L_2$, and
+\[
+L_1/\ker\varphi \cong \mathrm{Im}\,\varphi.
+\]
+
+\section*{Lie Algebras of Small Dimension}
+
+We classify complex Lie algebras of dimension $\le 3$ up to isomorphism.
+
+\subsection*{Dimension 1}
+
+Every 1-dimensional Lie algebra is abelian.
+Basis $\{e_1\}$ with $[e_1,e_1]=0$.
+
+\subsection*{Dimension 2}
+
+Either:
+\begin{itemize}
+\item Abelian (unique), or
+\item Non-abelian (unique up to isomorphism) with basis $\{e_1,e_2\}$ and
+\[
+[e_1,e_2]=e_1.
+\]
+\end{itemize}
+
+\subsection*{Dimension 3}
+
+There is a unique abelian algebra.
+
+Case 1: $\dim [L,L] = 1$.
+
+If $e_1 \in Z(L)$:
+\[
+[e_2,e_3] = e_1
+\]
+(Heisenberg algebra).
+
+Otherwise:
+\[
+[e_1,e_2] = e_1, \quad [e_1,e_3]=[e_2,e_3]=0.
+\]
+
+Case 2: $\dim [L,L]=2$.
+
+If $[L,L]$ is abelian:
+\[
+[e_1,e_3]=e_1, \quad [e_2,e_3]=\lambda e_2
+\]
+or Jordan form case
+\[
+[e_1,e_3]=e_1, \quad [e_2,e_3]=e_2 + e_1.
+\]
+
+Case 3: $[L,L]=L$.
+
+Then $L$ is unique and isomorphic to $\mathfrak{sl}_2(\mathbb{C})$.
+
+There exists a basis $\{h,e,f\}$ such that
+\[
+[h,e]=2e, \quad [h,f]=-2f, \quad [e,f]=h.
+\]
+
+Thus
+\[
+L \cong \mathfrak{sl}_2(\mathbb{C}),
+\]
+the Lie algebra of $2\times2$ traceless matrices with
+\[
+e=e_{12}, \quad f=e_{21}, \quad h=e_{11}-e_{22}.
+\]

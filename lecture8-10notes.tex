@@ -1,0 +1,229 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 8,9,10}
+
+\section*{Lie Groups}
+
+\textbf{Definition 1.}
+A \emph{Lie group} is a group $G$ equipped with a smooth manifold structure
+compatible with the group operations. This means:
+
+\begin{enumerate}
+\item The multiplication map
+\[
+m : G \times G \to G, \quad m(g,h)=gh
+\]
+is smooth.
+
+\item The inversion map
+\[
+s : G \to G, \quad s(g)=g^{-1}
+\]
+is smooth.
+\end{enumerate}
+
+Each element $g\in G$ defines diffeomorphisms
+\[
+L_g(h)=gh, \qquad R_g(h)=hg.
+\]
+
+\textbf{Examples.}
+
+\begin{enumerate}
+\item Any discrete (in particular finite) group;
+\item $\mathbb{R}$ under addition;
+\item $\mathbb{R}_+$ under multiplication;
+\item $S^1 = \{z\in\mathbb{C} : |z|=1\}$;
+\item $GL_n(\mathbb{R})$, $GL_n(\mathbb{C})$;
+\item $SL_n(\mathbb{R})$, $SL_n(\mathbb{C})$.
+\end{enumerate}
+
+\textbf{Definition 2.}
+A Lie group homomorphism is a smooth group homomorphism.
+A bijective one is an isomorphism.
+
+Examples:
+\[
+t \mapsto e^t : \mathbb{R}\to\mathbb{R}_+
+\]
+\[
+t \mapsto e^{2\pi i t} : \mathbb{R}\to S^1
+\]
+\[
+\det : GL_n(\mathbb{R}) \to \mathbb{R}^\times.
+\]
+
+\textbf{Definition 3.}
+A Lie subgroup is a closed smooth submanifold closed under multiplication.
+
+Examples:
+\[
+SL_n \subset GL_n, \quad N_+(n), \quad B_+(n), \quad O_n(\mathbb{R}), \quad SO_n(\mathbb{R}).
+\]
+
+\textbf{Proposition 1.}
+If $H\subset G$ is a Lie subgroup, then $G/H$ carries a natural manifold structure.
+If $H$ is normal, then $G/H$ is a Lie group.
+
+\textbf{Proposition 2. (Homomorphism Theorem)}
+If $\varphi:G_1\to G_2$ is surjective, then
+\[
+G_2 \cong G_1/\ker\varphi.
+\]
+
+\section*{Classification of 1-Dimensional Lie Groups}
+
+\textbf{Proposition 3.}
+Every connected 1-dimensional Lie group is isomorphic to
+\[
+\mathbb{R} \quad \text{or} \quad S^1.
+\]
+
+\section*{The Lie Functor}
+
+\textbf{Definition 5.}
+A vector field $\xi$ is left-invariant if
+\[
+L_{g*}\xi=\xi.
+\]
+
+\textbf{Proposition 4.}
+A left-invariant vector field is determined by its value at the identity.
+
+The Lie algebra of $G$ is
+\[
+\mathfrak{g} = \mathrm{Lie}\,G = T_eG.
+\]
+
+\textbf{Definition 6.}
+If
+\[
+m(x,y)=x+y+B(x,y)+o(x,y),
+\]
+then
+\[
+[x,y]=B(x,y)-B(y,x).
+\]
+
+Equivalent definitions:
+\[
+[x,y]=\frac{d}{dt}\frac{d}{ds}
+g_x(t)g_y(s)g_x(t)^{-1}g_y(s)^{-1}
+\]
+
+or
+
+\[
+[x,y]=[\xi_x,\xi_y](e).
+\]
+
+\textbf{Adjoint Representation}
+
+\[
+\mathrm{Ad}(g)=d_e(L_gR_{g^{-1}}).
+\]
+
+Examples:
+\[
+\mathrm{Lie}\,\mathbb{R}=\mathbb{R},
+\quad
+\mathrm{Lie}\,GL_n=\mathfrak{gl}_n,
+\quad
+\mathrm{Lie}\,SO_n=\mathfrak{so}_n.
+\]
+
+\textbf{Proposition 5.}
+If $\varphi:G_1\to G_2$, then
+\[
+d_e\varphi:\mathrm{Lie}\,G_1\to \mathrm{Lie}\,G_2
+\]
+is a Lie algebra homomorphism.
+
+\section*{Representations of 1-Dimensional Lie Groups}
+
+\textbf{Proposition 6.}
+Every finite-dimensional representation of $\mathbb{R}$ has the form
+\[
+\rho(t)=\exp(tA).
+\]
+
+\textbf{Proposition 7.}
+Every finite-dimensional representation of $S^1$
+is a direct sum of 1-dimensional representations
+\[
+\rho(z)=z^k, \quad k\in\mathbb{Z}.
+\]
+
+\section*{$SU(2)$ and $SO(3)$}
+
+\textbf{Definition 10.}
+\[
+SU(2)=\{A\in GL_2(\mathbb{C}) : A^\dagger=A^{-1}, \det A=1\}.
+\]
+
+\textbf{Proposition 8.}
+As a manifold,
+\[
+SU(2)\cong S^3.
+\]
+
+\textbf{Proposition 9.}
+\[
+\mathrm{Ad}:SU(2)\to SO(3)
+\]
+is a double covering.
+
+Kernel:
+\[
+\{\pm I\}.
+\]
+
+\section*{Connectedness and Universal Covering}
+
+\textbf{Proposition 10.}
+The identity component $G^0$ is a Lie subgroup.
+
+\textbf{Theorem 1.}
+Every connected Lie group has a unique simply connected universal cover.
+
+Examples:
+\[
+\mathbb{R}\to S^1,
+\quad
+SU(2)\to SO(3).
+\]
+
+\section*{Fundamental Groups}
+
+\textbf{Proposition 11.}
+\[
+\pi_1(SO_n(\mathbb{R}))=\mathbb{Z}/2\mathbb{Z}, \quad n\ge3.
+\]
+
+\textbf{Proposition 12.}
+\[
+\pi_1(SL_2(\mathbb{R}))=\mathbb{Z}.
+\]
+
+\section*{Haar Measure and Complete Reducibility}
+
+\textbf{Proposition 13.}
+Every Lie group admits a left-invariant measure (Haar measure),
+unique up to scalar.
+
+Examples:
+\[
+dt \text{ on } \mathbb{R}, \quad d\varphi \text{ on } S^1.
+\]
+
+\textbf{Theorem 2.}
+Every finite-dimensional representation of a compact Lie group
+is completely reducible.
+
+Proof: Average a projector:
+\[
+P=\int_G \rho(g)p\rho(g^{-1})\,dg.
+\]
+
+Then $P$ is an invariant projection and
+\[
+V=W\oplus\ker P.
+\]

@@ -1,0 +1,141 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 13,14}
+
+(The material of this lecture appears in much greater detail in
+Chapter 5 of Serre’s book \emph{Lie Algebras and Lie Groups}.)
+
+\section*{Nilpotent and Solvable Lie Algebras}
+
+\textbf{Definition 1.}
+A Lie algebra $\mathfrak g$ is called \emph{nilpotent} if there exists
+$N \in \mathbb{N}$ such that for any $x_1,\dots,x_N \in \mathfrak g$,
+
+\[
+[x_1,[x_2,\dots,[x_{N-1},x_N]\dots]]=0.
+\]
+
+Equivalently,
+\[
+[\mathfrak g,[\mathfrak g,\dots[\mathfrak g,\mathfrak g]\dots]]=0.
+\]
+
+Nilpotent Lie groups are defined analogously.
+
+Nilpotency is equivalent to the existence of a basis in which
+all operators $\mathrm{ad}\,x$ are strictly upper triangular matrices.
+
+\textbf{Definition 2.}
+The \emph{derived series} of $\mathfrak g$ is defined inductively by
+
+\[
+D^0\mathfrak g=\mathfrak g,
+\qquad
+D^k\mathfrak g=[D^{k-1}\mathfrak g,D^{k-1}\mathfrak g].
+\]
+
+The Lie algebra $\mathfrak g$ is \emph{solvable} if
+$D^N\mathfrak g=0$ for some $N$.
+
+\textbf{Proposition 1.}
+Every nilpotent Lie algebra is solvable.
+
+\textbf{Examples.}
+
+1. $\mathfrak n_+(n)$ (strictly upper triangular matrices) is nilpotent.
+
+2. $\mathfrak b_+(n)$ (upper triangular matrices) is solvable but not
+nilpotent for $n>1$.
+
+\textbf{Proposition 2.}
+$\mathfrak g$ is solvable iff there exists a chain of ideals
+
+\[
+0=\mathfrak g_0\subset\mathfrak g_1\subset\dots\subset\mathfrak g_N=\mathfrak g
+\]
+
+such that each quotient $\mathfrak g_{i+1}/\mathfrak g_i$ is abelian.
+
+\textbf{Proposition 3.}
+Subalgebras and quotients of solvable (resp. nilpotent) Lie algebras
+are solvable (resp. nilpotent).
+An extension of a solvable Lie algebra by a solvable one is solvable.
+
+\textbf{Proposition 4.}
+If $G$ is connected and simply connected with solvable Lie algebra
+$\mathfrak g$, then
+
+\[
+\exp:\mathfrak g\to G
+\]
+
+is a diffeomorphism.
+If $\mathfrak g$ is nilpotent, the group multiplication
+is given by polynomial formulas.
+
+\textbf{Corollary 1.}
+$G$ is solvable (resp. nilpotent)
+iff $\mathfrak g=\mathrm{Lie}\,G$ is solvable (resp. nilpotent).
+
+\section*{Engel's Theorem}
+
+\textbf{Theorem 1 (Engel).}
+Let $\mathfrak g\subset\mathfrak{gl}(V)$ consist of nilpotent operators.
+Then there exists a basis of $V$ in which all elements of $\mathfrak g$
+are strictly upper triangular.
+
+In particular, $\mathfrak g$ is nilpotent.
+
+\textbf{Corollary 2.}
+$\mathfrak g$ is nilpotent iff $\mathrm{ad}\,x$ is nilpotent
+for every $x\in\mathfrak g$.
+
+\section*{Lie's Theorem}
+
+\textbf{Theorem 2 (Lie).}
+Let $\mathfrak g\subset\mathfrak{gl}(V)$ be solvable over $\mathbb C$.
+Then there exists a basis of $V$ in which all elements
+of $\mathfrak g$ are upper triangular.
+
+(Note: false over $\mathbb R$.)
+
+\textbf{Corollary 3.}
+The commutator $[\mathfrak g,\mathfrak g]$
+of a solvable Lie algebra is nilpotent.
+
+\section*{Cartan's Criterion and Semisimple Lie Algebras}
+
+\textbf{Theorem 3 (Cartan's Criterion).}
+Let $\mathfrak g\subset\mathfrak{gl}(V)$ be such that
+
+\[
+\mathrm{tr}(xy)=0
+\quad\text{for all } x\in\mathfrak g,\ y\in[\mathfrak g,\mathfrak g].
+\]
+
+Then $\mathfrak g$ is solvable.
+
+\textbf{Corollary 4.}
+If the Killing form of $\mathfrak g$ is identically zero,
+then $\mathfrak g$ is solvable.
+
+\textbf{Definition 3.}
+A Lie algebra $\mathfrak g$ is \emph{semisimple}
+if it contains no nontrivial solvable ideals.
+
+\textbf{Examples.}
+
+1. $\mathfrak{sl}_n(\mathbb C)$ is simple (hence semisimple).
+
+2. The Lie algebra of affine transformations of the plane
+is neither semisimple nor solvable.
+
+\textbf{Corollary 5.}
+$\mathfrak g$ is semisimple iff its Killing form is nondegenerate.
+
+\textbf{Corollary 6.}
+A semisimple Lie algebra decomposes as a direct sum
+of nonabelian simple Lie algebras.
+
+\textbf{Proposition 5.}
+Every complex Lie algebra has a maximal solvable ideal,
+called the \emph{solvable radical}.
+The quotient by the radical is semisimple.

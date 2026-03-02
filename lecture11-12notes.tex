@@ -1,0 +1,177 @@
+\section*{Lectures on Lie Groups and Lie Algebras – 11,12}
+
+(The material of these lectures is contained in Chapter 1 of the book
+Vinberg–Onishchik, \emph{Seminar on Lie Groups and Algebraic Groups}.)
+
+\section*{The Exponential Map}
+
+Let $G$ be a connected Lie group and $\mathfrak g = \mathrm{Lie}\,G$.
+For $x \in \mathfrak g$ denote by $\xi_x$ the corresponding right-invariant
+vector field. Consider the Cauchy problem for a function
+$\varphi_x : \mathbb{R} \to G$:
+
+\[
+\dot\varphi_x = \xi_x, \qquad \varphi_x(0) = e.
+\]
+
+\textbf{Proposition 1.}
+The function $\varphi_x(t)$ is defined on the entire real line and satisfies
+
+\[
+\varphi_x(t+s) = \varphi_x(t)\varphi_x(s),
+\qquad
+\varphi_{sx}(t) = \varphi_x(st).
+\]
+
+\textbf{Proof.}
+The solution exists near $0$ by the existence theorem for ODEs.
+For fixed $s$, the functions $\varphi_x(t+s)$ and
+$\varphi_x(t)\varphi_x(s)$ satisfy the same differential equation
+$\dot\psi(t)=\xi_x$ (in the variable $t$) with the same initial condition
+$\psi(0)=\varphi_x(s)$. By uniqueness, they coincide.
+Hence $\varphi_x(t)$ extends to all of $\mathbb{R}$.
+The second identity follows similarly.
+\qed
+
+\textbf{Definition 1.}
+The exponential map $\exp : \mathfrak g \to G$ is defined by
+\[
+\exp(x) := \varphi_x(1).
+\]
+
+\textbf{Examples.}
+
+1. $G=\mathbb{R}$ (additive): $\exp(x)=x$.
+
+2. $G=\mathbb{R}_+$ (multiplicative):
+\[
+\exp(x)=e^x.
+\]
+
+3. $G=GL_n(\mathbb{R})$:
+\[
+\exp(x)=e^x.
+\]
+
+\textbf{Proposition 2.}
+The map $\exp : \mathfrak g \to G$ is smooth and
+\[
+d_0 \exp = \mathrm{id}_{\mathfrak g}.
+\]
+
+\textbf{Proposition 3.}
+The exponential map is functorial:
+for any Lie group homomorphism
+$\psi:G_1\to G_2$ the diagram commutes
+
+\[
+\begin{array}{ccc}
+G_1 & \xrightarrow{\psi} & G_2 \\
+\uparrow \exp & & \uparrow \exp \\
+\mathfrak g_1 & \xrightarrow{d_e\psi} & \mathfrak g_2
+\end{array}
+\]
+
+In particular:
+
+\[
+\det e^A = e^{\mathrm{tr} A},
+\qquad
+A^T=-A \Rightarrow e^A \in O_n.
+\]
+
+\section*{Uniqueness Theorems}
+
+\textbf{Theorem 1.}
+Any Lie algebra homomorphism
+$\mathfrak g_1 \to \mathfrak g_2$
+extends to a homomorphism of the corresponding connected Lie groups
+in at most one way.
+
+\textbf{Theorem 2.}
+To every Lie subalgebra $\mathfrak h \subset \mathfrak g$
+there corresponds at most one connected Lie subgroup
+$H\subset G$ such that
+\[
+T_eH=\mathfrak h.
+\]
+
+\textbf{Example (Winding of the Torus).}
+Let $G=S^1\times S^1$.
+Choose basis $x_1,x_2$ of $\mathfrak g=\mathbb R^2$ such that
+
+\[
+\exp(ax_1+bx_2)
+=
+e^{2\pi i a}\times e^{2\pi i b}.
+\]
+
+Let $\mathfrak h=\mathbb R(x_1+\alpha x_2)$,
+where $\alpha$ is irrational.
+Then $\exp(\mathfrak h)$ is dense in $G$.
+Thus $\mathfrak h$ corresponds to no Lie subgroup.
+
+\section*{Virtual Lie Subgroups}
+
+\textbf{Definition 2.}
+A subgroup $H\subset G$ is called a \emph{virtual Lie subgroup}
+if $H$ admits a Lie group structure such that
+the inclusion $H\hookrightarrow G$ is a Lie group homomorphism.
+
+For any $x\in\mathfrak g$,
+\[
+\{\exp(tx)\mid t\in\mathbb R\}
+\]
+is a virtual Lie subgroup.
+
+\section*{Existence Theorems}
+
+\textbf{Theorem 3.}
+Every Lie algebra homomorphism
+$f:\mathfrak g_1\to\mathfrak g_2$
+extends to a homomorphism of connected simply connected Lie groups.
+
+(Proof uses path lifting and ODE uniqueness.)
+
+\textbf{Theorem 4.}
+Every Lie subalgebra $\mathfrak h\subset\mathfrak g$
+corresponds to a virtual Lie subgroup $H\subset G$
+with
+\[
+T_eH=\mathfrak h.
+\]
+
+\textbf{Remark.}
+By Ado's theorem,
+every finite-dimensional Lie algebra admits a faithful representation
+$\mathfrak h \to \mathfrak{gl}_N$.
+Thus every Lie algebra is the Lie algebra of some Lie group.
+
+\section*{Commutator and Malcev Closure}
+
+\textbf{Proposition 4.}
+The commutator subgroup $G'$ of a connected simply connected Lie group
+is a normal Lie subgroup with
+\[
+\mathrm{Lie}\,G'=[\mathfrak g,\mathfrak g].
+\]
+
+\textbf{Definition 3.}
+The Malcev closure $\mathfrak h^M$ of a Lie subalgebra
+$\mathfrak h\subset\mathfrak g$
+is the minimal Lie subalgebra that is tangent
+to a Lie subgroup of $G$ and contains $\mathfrak h$.
+
+\textbf{Proposition 5.}
+\[
+[\mathfrak h^M,\mathfrak h^M]=[\mathfrak h,\mathfrak h].
+\]
+
+\textbf{Sketch of Proof of Theorem 4.}
+Reduce to the simply connected case.
+Integrate $\mathfrak h^M$ and $[\mathfrak h,\mathfrak h]$
+to subgroups $H^M$ and $H_0^M$.
+The quotient $H^M/H_0^M$ is abelian.
+Its subgroup $\exp(\mathfrak h/[\mathfrak h,\mathfrak h])$
+is a virtual Lie subgroup.
+Pulling it back gives the required $H$.
